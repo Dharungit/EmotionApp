@@ -16,10 +16,6 @@ export const Home: React.FC = () => {
     dispatch(addEmotion({mood, timestamp: Date.now()}));
   }, []);
 
-  // React.useEffect(() => {
-  //   console.log('Store Data ', storeEmotions);
-  // }, [storeEmotions]);
-
   return (
     <View style={styles.container}>
       <MoodPicker onSelect={handleSelectMood} />
