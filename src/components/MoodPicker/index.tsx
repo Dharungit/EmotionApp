@@ -1,15 +1,15 @@
 import React from 'react';
 import {View, Text, FlatList, Pressable} from 'react-native';
 import {moodOptions} from '../../helper/MoodOption';
-import {MoodOptionType} from '../../types';
+import {IMoodOption} from '../../types';
 import {styles} from './styles';
 
-type MoodPickerProps = {
-  onSelect: (mood: MoodOptionType) => void;
-};
+interface IMoodPickerProps {
+  onSelect: (mood: IMoodOption) => void;
+}
 
-export const MoodPicker: React.FC<MoodPickerProps> = ({onSelect}) => {
-  const [selectedMoodItem, setSelected] = React.useState<MoodOptionType>();
+export const MoodPicker: React.FC<IMoodPickerProps> = ({onSelect}) => {
+  const [selectedMoodItem, setSelected] = React.useState<IMoodOption>();
 
   const handleSelect = React.useCallback(() => {
     if (selectedMoodItem) {

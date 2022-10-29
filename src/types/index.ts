@@ -1,9 +1,9 @@
-export type MoodOptionType = {
+export interface IMoodOption {
   emoji: string;
   description: string;
-};
+}
 
-export type MoodOptionWithTimestamp = {
-  mood: MoodOptionType;
+export interface IMoodOptionWithTimestamp {
+  mood: IMoodOption;
   timestamp: number;
-};
+}
